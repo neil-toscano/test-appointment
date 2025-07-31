@@ -8,7 +8,7 @@ orbs:
 executors:
   docker-executor:
     docker:
-      - image: public.ecr.aws/sam/build-nodejs20.x
+      - image: cimg/node:20.11 
     working_directory: ~/project
 
 jobs:
