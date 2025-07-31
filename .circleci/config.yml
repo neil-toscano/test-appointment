@@ -19,8 +19,8 @@ jobs:
       - run:
           name: Package code
           command: |
-            cp -r src/* .
-            zip -r function.zip .
+            npm ci
+            npm run build
       - aws-cli/setup:
           profile_name: default
       - aws-sam-serverless/install

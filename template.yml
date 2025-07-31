@@ -11,9 +11,9 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: !Sub "circle-ci-service-${Environment}"
-      Handler: index.handler
+      Handler: app.handler
       Runtime: nodejs20.x
-      CodeUri: function.zip
+      CodeUri: dist/
       Environment:
         Variables:
           Environment: !Ref Environment
